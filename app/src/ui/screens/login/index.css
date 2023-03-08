@@ -1,0 +1,15 @@
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+  width: 100%;
+  height: 100vh;
+  color: black;
+  background-color:  #24394d;
+}
+
+.login-screen img{
+  width: 80vh;
+}

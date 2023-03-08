@@ -1,0 +1,14 @@
+.input {
+  color: black;
+}
+
+.tela-login {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 30vh;
+  width: 30vh;
+}

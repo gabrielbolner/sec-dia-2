@@ -1,0 +1,44 @@
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #051b34;
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body::-webkit-scrollbar {
+  width: 0.35em;
+  background-color: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000000c7;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #616161;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
