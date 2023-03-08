@@ -42,7 +42,7 @@ export function ProfileEditScreen() {
           <div className="profile-edit-container">
             <section className="profile-edit">
               <img
-                className="profile-image"
+                className="image-profile"
                 src={profile.profileImage}
                 alt={profile.fullName}
               />
