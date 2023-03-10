@@ -18,7 +18,14 @@ export default function RegisterForm({ erro }) {
   async function apiRegister() {
     event.preventDefault();
 
-    const response = await register(fullName, email, password, profileImage, phone, permission);
+    const response = await register(
+      fullName,
+      email,
+      password,
+      profileImage,
+      phone,
+      permission
+    );
 
     if (response.id) {
       alert("Cadastro Feito com Sucesso");
@@ -32,47 +39,40 @@ export default function RegisterForm({ erro }) {
   return (
     <form className="tela-registro">
       <h2>Cadastre-se</h2>
-      <label htmlFor="nome" className="input">
-        Nome Completo:{" "}
-      </label>
       <input
+        placeholder=" Nome Completo"
         id="nome"
         type="text"
         value={fullName}
         onChange={(e) => setFullName(e.target.value)}
       />
       <br />
-
-      <label htmlFor="email" className="input">
-        Email:{" "}
-      </label>
       <input
+        placeholder="Email"
         id="email"
         type="text"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <br />
-      <label htmlFor="profileImage" className="input">
-        Link Imagem Perfil:{" "}
-      </label>
       <input
+        placeholder="Link Imagem Perfil"
         id="profileImage"
         type="text"
         value={profileImage}
         onChange={(e) => setProfileImage(e.target.value)}
       />
       <br />
-      <label htmlFor="password">Senha: </label>
       <input
+        placeholder="Senha"
         id="password"
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
       <br />
-      <label htmlFor="phone">Telefone: </label>
       <input
+        placeholder="Telefone"
         id="phone"
         type="phone"
         value={phone}

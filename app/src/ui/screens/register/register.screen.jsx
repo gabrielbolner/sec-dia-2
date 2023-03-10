@@ -1,5 +1,5 @@
 import "./index.css";
-import {useState} from "react";
+import { useState } from "react";
 import RegisterForm from "../../components/register-form/register-form.component";
 
 export function RegisterScreen() {

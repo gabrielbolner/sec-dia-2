@@ -2,7 +2,7 @@ import logo from "../../../assets/img/logo.png";
 
 import "./index.css";
 import LogoutForm from "../logout/logout-form.component";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Header({ children }) {
   const navigate = useNavigate();

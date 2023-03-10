@@ -16,4 +16,6 @@ public interface UserRepository extends JpaRepository<User, Long> {
                                                                                       boolean active,
                                                                                       Pageable pageable);
 
+    User findByResetToken(String resetToken);
+
 }

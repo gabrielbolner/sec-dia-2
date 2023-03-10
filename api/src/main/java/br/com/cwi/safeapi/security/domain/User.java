@@ -36,6 +36,8 @@ public class User {
 
     private String phone;
 
+    private String resetToken;
+
     private LocalDate added_in;
 
     private LocalDate modified_in;

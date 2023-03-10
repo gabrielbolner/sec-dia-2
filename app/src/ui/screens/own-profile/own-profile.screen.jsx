@@ -1,8 +1,8 @@
 import "./index.css";
-import {Header} from "../../components/header/header.component";
+import { Header } from "../../components/header/header.component";
 import useGlobalUser from "../../../context/user/user.context";
 import React from "react";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function OwnProfileScreen() {
   const [user, setUser] = useGlobalUser();
@@ -46,4 +46,3 @@ export function OwnProfileScreen() {
     </>
   );
 }
-

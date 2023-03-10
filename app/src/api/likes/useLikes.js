@@ -1,5 +1,5 @@
 import useGlobalUser from "../../context/user/user.context";
-import {axiosInstance} from "../_base/axiosInstance";
+import { axiosInstance } from "../_base/axiosInstance";
 
 export function useLikes() {
   const [user, setUser] = useGlobalUser();
@@ -11,8 +11,8 @@ export function useLikes() {
       );
       return response;
     } catch (error) {
-console.log(error)
-}
+      console.log(error);
+    }
   }
 
   async function removeLikePost(idPost) {
@@ -22,8 +22,8 @@ console.log(error)
       );
       return response;
     } catch (error) {
-console.log(error)
-}
+      console.log(error);
+    }
   }
 
   async function getLikesInfo(idPost) {
@@ -31,12 +31,9 @@ console.log(error)
       const response = await axiosInstance.get(`/posts/${idPost}/likes`);
       return response.data;
     } catch (error) {
-       console.log(error);
+      console.log(error);
     }
   }
-
-
-
 
   return {
     likePost,

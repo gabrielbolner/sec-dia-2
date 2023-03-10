@@ -5,7 +5,6 @@ import br.com.cwi.safeapi.security.controller.response.UserResponse;
 import br.com.cwi.safeapi.security.domain.User;
 import br.com.cwi.safeapi.security.mapper.UserMapper;
 import br.com.cwi.safeapi.security.repository.UserRepository;
-import br.com.cwi.safeapi.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +13,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.Objects;
-import java.util.Optional;
 
 @Service
 public class UserListService {
@@ -37,8 +35,6 @@ public class UserListService {
 
     public UserResponse updateProfile(Long id, UpdateUserRequest request) {
 
-
-        //User user = UserValidator.findById(id);
         User user = userRepository.findById(id).get();
         if (Objects.isNull(user)){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Usuario não existe");

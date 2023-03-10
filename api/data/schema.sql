@@ -8,6 +8,7 @@ email VARCHAR(100) NOT NULL,
 added_in DATE ,
 modified_in DATE ,
 profile_image VARCHAR(512),
+reset_token VARCHAR(512),
 phone VARCHAR(20),
 password VARCHAR(100) NOT NULL,
 active BOOLEAN NOT NULL
@@ -23,3 +24,10 @@ user_id BIGINT NOT NULL
 ALTER TABLE permission ADD CONSTRAINT pk_permission PRIMARY KEY (id);
 ALTER TABLE permission ADD CONSTRAINT uk_permission UNIQUE (function, user_id);
 ALTER TABLE permission ADD CONSTRAINT fk_permission_user FOREIGN KEY (user_id) REFERENCES users;
+
+CREATE TABLE password_reset_token (
+    id BIGINT PRIMARY KEY,
+    token VARCHAR(255) NOT NULL,
+    user_id BIGINT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    expiration_date TIMESTAMP NOT NULL
+);

@@ -29,23 +29,26 @@ public class SecurityConfig {
                 .cors()
 
                 .and()
-                    .authorizeRequests()
-                        .antMatchers("/*/**/publico").permitAll()
-                        .antMatchers(POST, "/users").permitAll()
-                        .antMatchers(GET, "/posts").permitAll()
+                .authorizeRequests()
+                .antMatchers("/*/**/publico").permitAll()
+                .antMatchers(POST, "/users").permitAll()
+                .antMatchers(GET, "/posts").permitAll()
+                .antMatchers("/passwords/**").permitAll()
+                .antMatchers("/passwords/recover-password").permitAll()
+                .antMatchers("/passwords/forgot-password").permitAll()
 
                 .and()
-                    .authorizeRequests()
-                        .anyRequest().authenticated()
+                .authorizeRequests()
+                .anyRequest().authenticated()
 
                 .and()
-                    .httpBasic()
-                        .authenticationEntryPoint((request, response, authException) -> response.setStatus(UNAUTHORIZED.value()))
+                .httpBasic()
+                .authenticationEntryPoint((request, response, authException) -> response.setStatus(UNAUTHORIZED.value()))
 
 
                 .and()
-                    .logout()
-                        .logoutSuccessHandler((request, response, authentication) -> response.setStatus(OK.value()))
+                .logout()
+                .logoutSuccessHandler((request, response, authentication) -> response.setStatus(OK.value()))
         ;
 
 

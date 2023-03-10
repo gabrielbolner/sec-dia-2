@@ -1,10 +1,10 @@
 import "./index.css";
-import {Header} from "../../components/header/header.component";
-import {useNavigate} from "react-router-dom";
-import {useEffect, useState} from "react";
+import { Header } from "../../components/header/header.component";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 import useGlobalUser from "../../../context/user/user.context";
-import {useProfile} from "../../../api/profile/useProfile";
+import { useProfile } from "../../../api/profile/useProfile";
 
 export function ProfileEditScreen() {
   const [user, setUser] = useGlobalUser();
@@ -25,7 +25,6 @@ export function ProfileEditScreen() {
     }
     apiLoadProfile();
   }, []);
-
 
   const apiEditProfile = async (event) => {
     event.preventDefault();

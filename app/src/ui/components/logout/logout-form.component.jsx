@@ -1,5 +1,5 @@
-import {useNavigate} from "react-router-dom";
-import {logout} from "../../../api/auth/logout.api";
+import { useNavigate } from "react-router-dom";
+import { logout } from "../../../api/auth/logout.api";
 import useGlobalUser from "../../../context/user/user.context";
 import "./index.css";
 

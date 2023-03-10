@@ -1,5 +1,5 @@
 import useGlobalUser from "../../context/user/user.context";
-import {axiosInstance} from "../_base/axiosInstance";
+import { axiosInstance } from "../_base/axiosInstance";
 
 export function usePosts() {
   const [user, setUser] = useGlobalUser();
@@ -9,7 +9,7 @@ export function usePosts() {
       const response = await axiosInstance.get(`/posts/${id}`);
       return response.data.content;
     } catch (error) {
-       console.log(error);
+      console.log(error);
     }
   }
 
@@ -25,7 +25,6 @@ export function usePosts() {
       console.log(error);
     }
   }
-
 
   return {
     searchPostById,

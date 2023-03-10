@@ -1,5 +1,5 @@
 import useGlobalUser from "../../context/user/user.context";
-import {axiosInstance} from "../_base/axiosInstance";
+import { axiosInstance } from "../_base/axiosInstance";
 
 export function useProfile() {
   const [user, setUser] = useGlobalUser();
@@ -35,10 +35,9 @@ export function useProfile() {
     }
   }
 
-  
   return {
-     searchProfileByNameOrEmail,
-     searchProfileById,
-     updateProfile
+    searchProfileByNameOrEmail,
+    searchProfileById,
+    updateProfile,
   };
 }

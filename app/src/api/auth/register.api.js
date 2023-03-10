@@ -1,4 +1,4 @@
-import {axiosInstance} from "../_base/axiosInstance";
+import { axiosInstance } from "../_base/axiosInstance";
 
 export async function register(
   fullName,

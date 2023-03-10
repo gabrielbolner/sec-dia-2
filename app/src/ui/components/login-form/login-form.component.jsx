@@ -1,6 +1,6 @@
 import React from "react";
-import {useNavigate} from "react-router-dom";
-import {useForm} from "../../../hooks/form/use-form.hook";
+import { useNavigate } from "react-router-dom";
+import { useForm } from "../../../hooks/form/use-form.hook";
 import "./index.css";
 
 const initialFormFields = {
@@ -19,6 +19,10 @@ export default function LoginForm({ onSubmit, error }) {
     navigate("/register");
   }
 
+  function irAteResetarSenha() {
+    navigate("/forgot-my-password");
+  }
+
   return (
     <form
       title="Login"
@@ -28,6 +32,7 @@ export default function LoginForm({ onSubmit, error }) {
       className="tela-login"
     >
       <input
+        placeholder="Email"
         className="login-register-form_input"
         name="username"
         onChange={handleChange}
@@ -36,6 +41,7 @@ export default function LoginForm({ onSubmit, error }) {
       />
 
       <input
+        placeholder="Senha"
         className="login-register-form_input"
         name="password"
         onChange={handleChange}
@@ -43,6 +49,7 @@ export default function LoginForm({ onSubmit, error }) {
         type="password"
       />
       <button>LOGIN</button>
+      <button onClick={() => irAteResetarSenha()}>ESQUECI MINHA SENHA</button>
       <button onClick={() => irAteRegistro()}>REGISTRAR</button>
     </form>
   );

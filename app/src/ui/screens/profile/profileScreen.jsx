@@ -1,8 +1,8 @@
 import "./index.css";
-import {Header} from "../../components/header/header.component";
-import {useNavigate, useParams} from "react-router-dom";
-import {useEffect, useState} from "react";
-import {useProfile} from "../../../api/profile/useProfile";
+import { Header } from "../../components/header/header.component";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useProfile } from "../../../api/profile/useProfile";
 
 export function ProfileScreen() {
   const [profile, setProfile] = useState([]);

@@ -1,8 +1,8 @@
 import "./index.css";
-import logo from "../../../logo.png"
-import {useEffect, useState} from "react";
-import {useNavigate} from "react-router-dom";
-import {login} from "../../../api/auth/login.api";
+import logo from "../../../logo.png";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { login } from "../../../api/auth/login.api";
 import useGlobalUser from "../../../context/user/user.context";
 import LoginForm from "../../components/login-form/login-form.component";
 
@@ -32,7 +32,7 @@ export function LoginScreen() {
 
   return (
     <div className="login-screen">
-      <img src={logo} alt="Cwitter Logo" />
+      <img src={logo} alt="SafetyLogin Logo" />
       <LoginForm onSubmit={onSubmit} error={errorMessage} />
     </div>
   );

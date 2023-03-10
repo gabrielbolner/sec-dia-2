@@ -47,7 +47,7 @@ public class AddUserService {
         return toResponse(user);
     }
 
-    private String getSenhaCriptografada(String openPassword) {
+    public String getSenhaCriptografada(String openPassword) {
         return passwordEncoder.encode(openPassword);
     }
 
